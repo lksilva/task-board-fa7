@@ -19,7 +19,7 @@ export class AddTaskComponent implements OnInit {
   }
 
   addTask() {
-    const payload = {id: this.id, name: this.name, description: this.description};
+    const payload = {id: this.id, task: {name: this.name, description: this.description}};
     this.addTaskEvent.emit(payload);
   }
 

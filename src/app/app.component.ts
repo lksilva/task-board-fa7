@@ -32,7 +32,9 @@ export class AppComponent {
     this.listEstorias = this.listEstorias.filter((a) => a.id !== id);
   }
 
-  createNewTask(task) {
-    console.log(task);
+  createNewTask(payload) {
+    var gina = this.listEstorias.find( i => i.id === payload.id);
+    console.log('Inserir a parada na ', gina);
+    console.log('Task: ', payload.task);
   }
 }
