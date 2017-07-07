@@ -1,9 +1,18 @@
-  <div class="row">
-    <div class="input-field col s6">
-      <input value="" id="name" type="text" class="validate" [(ngModel)]="name">
-      <label class="active" for="name">Name</label>
-      <input value="" id="description" type="text" class="validate" [(ngModel)]="description">
-      <label class="active" for="description">Description</label>
-      <button (click)="addTask()">ADD</button>
-    </div>
+
+<h3 class="center-align blue lighten-5">Inserir Tarefas</h3>
+<div class="row">
+  <div class="input-field col s12">
+    <input id="name" type="text" class="validate" [(ngModel)]="name">
+    <label for="name">Name</label>
   </div>
+</div>
+<div class="row">
+  <div class="input-field col s12">
+    <input id="description" type="text" class="validate" [(ngModel)]="description">
+    <label for="description">Description</label>
+  </div>
+</div>
+
+<button (click)="addTask()" class="btn waves-effect waves-light">Submit
+  <i class="material-icons right">send</i>
+</button>

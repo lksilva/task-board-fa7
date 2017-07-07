@@ -25,7 +25,8 @@ export class AppComponent {
   }];
 
   inserTask(id) {
-    this.listEstorias.find( i => i.id === id).show = true;
+    let estoria = this.listEstorias.find( i => i.id === id);
+    estoria.show = !estoria.show;
   }
 
   finish(id) {
@@ -33,8 +34,8 @@ export class AppComponent {
   }
 
   createNewTask(payload) {
-    var gina = this.listEstorias.find( i => i.id === payload.id);
-    console.log('Inserir a parada na ', gina);
-    console.log('Task: ', payload.task);
+    let gina = this.listEstorias.find( i => i.id === payload.id);
+    gina.show = false;
+    gina.taskList.push(payload.task);
   }
 }
